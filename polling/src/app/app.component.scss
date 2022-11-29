@@ -1,0 +1,25 @@
+.application-title {
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    color: white;
+    background-color: #AAAE7F;
+    height: 100px;
+}
+
+
+mat-sidenav {
+    position: sticky;
+    margin: 16px;
+    width: 100px;
+    border-right: none;
+    background-color: #D0D6B3;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+mat-sidenav-container {
+    height: calc(100vh - 65px)
+}

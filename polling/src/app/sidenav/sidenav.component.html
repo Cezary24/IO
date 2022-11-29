@@ -1,0 +1,30 @@
+<mat-toolbar class="application-title" color="#AAA#7F"> Ankiety </mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav opened mode="side">
+    <div class="side-nav-buttons">
+      <button mat-button class="first-side-button">
+        <div routerLink="/user-profile">Profil użytkownika</div>
+      </button>
+
+      <button mat-button class="side-button">
+        <div routerLink="/poll">Dołącz do ankiety</div>
+      </button>
+
+      <button mat-button class="side-button">
+        <div routerLink="/create-poll">Utwórz ankietę</div>
+      </button>
+
+      <button mat-button class="side-button">
+        <div routerLink="/poll-history">Przejrzyj wypełnione</div>
+      </button>
+
+      <button mat-button class="side-button" (click)="onLogoutToggle()">
+        <mat-icon mat-button>logout</mat-icon>
+        <p>Wyloguj się</p>
+      </button>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content> <router-outlet></router-outlet></mat-sidenav-content>
+</mat-sidenav-container>

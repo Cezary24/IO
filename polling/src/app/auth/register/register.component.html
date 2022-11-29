@@ -1,0 +1,108 @@
+<div class="register-form">
+  <form [formGroup]="registerForm">
+    <mat-card class="register-card">
+      <h1 class="title">Rejestracja</h1>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Imie" formControlName="name" />
+              <mat-error
+                *ngIf="registerForm.controls['name'].hasError('required')"
+              >
+                Imie jest <strong>wymagane</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                placeholder="Nazwisko"
+                formControlName="surname"
+              />
+              <mat-error
+                *ngIf="registerForm.controls['surname'].hasError('required')"
+              >
+                Nazwisko jest <strong>wymagane</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                placeholder="Nazwa użytkownika"
+                formControlName="login"
+              />
+              <mat-error
+                *ngIf="registerForm.controls['login'].hasError('required')"
+              >
+                nazwa użytkownika jest <strong>wymagana</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                placeholder="Hasło"
+                type="password"
+                formControlName="password"
+              />
+              <mat-error
+                *ngIf="registerForm.controls['password'].hasError('required')"
+              >
+                Hasło jest <strong>wymagane</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="PESEL" formControlName="PESEL" />
+              <mat-error
+                *ngIf="registerForm.controls['PESEL'].hasError('required')"
+              >
+                PESEL jest <strong>wymagane</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <div>
+            <button
+              mat-button
+              class="register-button"
+              (click)="openLoginForm()"
+            >
+              ZALOGUJ SIĘ
+            </button>
+          </div>
+          <div>
+            <button
+              mat-button
+              class="register-button"
+              (click)="onSubmit()"
+              [disabled]="!isFormValid()"
+            >
+              ZAREJESTRUJ SIĘ
+            </button>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>

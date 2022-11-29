@@ -1,0 +1,84 @@
+.full-width {
+    width: 25vw;
+}
+
+.login-card {
+    background-color: #D0D6B3;
+    width: 40vw;
+    height: 15vw;
+    min-width: 120px;
+    margin: 20px auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.col:last-child {
+    margin-right: 0;
+}
+
+.buttons {
+    display: flex;
+  align-content: stretch;
+    gap: 1vw;
+    justify-content: center;
+}
+
+button {
+    font-size: 1.5vw;
+       
+}
+
+h1.title {
+    text-align: center;
+    font-size:  30px;
+}
+
+.log-button {
+    background-color: #AAAE7F;
+    font-size: large;
+    width: 200px;
+
+}
+.mat-raised-button{
+    margin: none;
+}
+
+.login-form{
+    align-items: center;
+display: flex;
+justify-content: center;
+height: 800px;
+}
+
+// media query
+@media (max-width: 930px) {
+    .login-card {
+        width: 45vw;
+        min-width: 120px;
+    }
+
+    .full-width {
+        width: 45vw;
+    }
+}
+
+// media query
+@media (max-width: 600px) {
+    .login-card {
+        width: 65vw;
+        min-width: 120px;
+    }
+
+    .full-width {
+        width: 65vw;
+    }
+}

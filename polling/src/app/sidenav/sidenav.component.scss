@@ -1,0 +1,45 @@
+
+.application-title{
+    background-color:#AAAE7F ;
+    
+   font-size: 35px;
+}
+
+mat-sidenav-container{
+    height: calc(205vh - 115vh);
+}
+
+mat-sidenav{
+    width: 300px;
+    background-color: #D0D6B3;
+}
+
+mat-sidenav-content{
+    background-color: #edf5d2;
+}
+
+.first-button-side-nav{
+    width: 200px;
+    background-color: #AAAE7F;
+}
+
+.side-nav-buttons{
+    display: flex;
+   flex-direction: column;
+}
+
+.side-button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #AAAE7F ;
+    height: 70px;
+    font-size: 20px;
+}
+.first-side-button{
+        margin-top: 10px;
+            margin-bottom: 10px;
+            height: 70px;
+            background-color: #7F855A;
+            font-size: 20px;
+        
+}
