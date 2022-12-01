@@ -5,9 +5,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { PollComponent } from './poll/poll.component';
 import { CreatingPollComponent } from './creating-poll/creating-poll.component';
 import { PollHistoryComponent } from './poll-history/poll-history.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
-import { SecurityGuardian } from './auth/security.guard';
 import { RegisterComponent } from './auth/register/register.component';
 
 const routes: Routes = [

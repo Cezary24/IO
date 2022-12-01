@@ -1,30 +1,28 @@
-<mat-toolbar class="application-title" color="#AAA#7F"> Ankiety </mat-toolbar>
-
 <mat-sidenav-container>
-  <mat-sidenav opened mode="side">
-    <div class="side-nav-buttons">
-      <button mat-button class="first-side-button">
-        <div routerLink="/user-profile">Profil użytkownika</div>
+  <mat-sidenav opened mode="side" #sideNav>
+
+    <div class="side-nav-items-container">
+      <div class="side-menu">
+        <span class="text-menu">Menu</span>
+        <mat-icon mat-button (click)="sideNav.close()">close</mat-icon>
+      </div>
+
+      <button class="side-button" routerLink="/poll">
+        <span class="text">Dołącz do ankiety</span>
+        <mat-icon mat-button>touch_app</mat-icon>
       </button>
 
-      <button mat-button class="side-button">
-        <div routerLink="/poll">Dołącz do ankiety</div>
+      <button class="side-button" routerLink="/create-poll">
+        <span class="text">Utwórz ankietę</span>
+        <mat-icon mat-button>create</mat-icon>
       </button>
-
-      <button mat-button class="side-button">
-        <div routerLink="/create-poll">Utwórz ankietę</div>
-      </button>
-
-      <button mat-button class="side-button">
-        <div routerLink="/poll-history">Przejrzyj wypełnione</div>
-      </button>
-
-      <button mat-button class="side-button" (click)="onLogoutToggle()">
-        <mat-icon mat-button>logout</mat-icon>
-        <p>Wyloguj się</p>
+     
+      <button class="side-button" routerLink="/poll-history">
+        <span class="text">Przejrzyj wypełnione</span>
+        <mat-icon mat-button>pageview</mat-icon>
       </button>
     </div>
-  </mat-sidenav>
 
+  </mat-sidenav>
   <mat-sidenav-content> <router-outlet></router-outlet></mat-sidenav-content>
 </mat-sidenav-container>

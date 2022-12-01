@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col">
             <mat-form-field class="full-width">
-              <input matInput placeholder="Login" formControlName="login" />
+              <input matInput placeholder="Nazwa użytkownika" formControlName="login" />
               <mat-error
                 *ngIf="loginForm.controls['login'].hasError('required')"
               >
@@ -48,10 +48,10 @@
 
         <button
           mat-raised-button
-          class="log-button"
+          class="register-button"
           (click)="openRegisterWindow()"
         >
-          REJESTRACJA
+          ZAREJESTRUJ SIĘ
         </button>
       </div>
     </mat-card>

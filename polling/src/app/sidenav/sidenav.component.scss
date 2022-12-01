@@ -1,8 +1,7 @@
 
 .application-title{
-    background-color:#AAAE7F ;
-    
-   font-size: 35px;
+    background-color: rgb(255, 255, 255);
+    font-size: 35px;
 }
 
 mat-sidenav-container{
@@ -11,35 +10,58 @@ mat-sidenav-container{
 
 mat-sidenav{
     width: 300px;
-    background-color: #D0D6B3;
+    background-color: #ffffff;;
 }
 
 mat-sidenav-content{
-    background-color: #edf5d2;
+    background-color: #ffffff;
 }
 
-.first-button-side-nav{
-    width: 200px;
-    background-color: #AAAE7F;
-}
 
-.side-nav-buttons{
-    display: flex;
+.side-nav-items-container{
+   display: flex;
    flex-direction: column;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-top: 10px;
 }
 
 .side-button{
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #AAAE7F ;
-    height: 70px;
+    background-color:  rgb(211, 234, 243) ;
+    height: auto;
     font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 10px 10px 15px;
+
+    display: flex;
+    justify-content:space-between;
+    caret-color: transparent; 
 }
-.first-side-button{
-        margin-top: 10px;
-            margin-bottom: 10px;
-            height: 70px;
-            background-color: #7F855A;
-            font-size: 20px;
-        
+
+.text {
+    text-align: right;
 }
+
+.side-menu {
+    margin-top: 10px;
+    height: auto;
+    font-size: 20px;
+    border: none;
+    padding: 10px 10px 10px 15px;
+    display: flex;
+    justify-content:space-between;
+    caret-color: transparent;
+}
+
+.text-menu {
+    font-weight: 500;
+    font-size: larger;
+}
+.panel-close{
+    width: 0;
+}
+
+

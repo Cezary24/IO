@@ -6,11 +6,11 @@
         <div class="row">
           <div class="col">
             <mat-form-field class="full-width">
-              <input matInput placeholder="Imie" formControlName="name" />
+              <input matInput placeholder="Imię" formControlName="name" ngModel pattern=" *[a-zA-Z]* *">
               <mat-error
-                *ngIf="registerForm.controls['name'].hasError('required')"
+                *ngIf="registerForm.controls['name'].hasError('pattern')"
               >
-                Imie jest <strong>wymagane</strong>
+                Imię jest <strong>wymagane</strong>
               </mat-error>
             </mat-form-field>
           </div>
@@ -23,9 +23,10 @@
                 matInput
                 placeholder="Nazwisko"
                 formControlName="surname"
+                ngModel pattern=" *[a-zA-Z]*-?[a-zA-Z]*? *"
               />
               <mat-error
-                *ngIf="registerForm.controls['surname'].hasError('required')"
+                *ngIf="registerForm.controls['surname'].hasError('pattern')"
               >
                 Nazwisko jest <strong>wymagane</strong>
               </mat-error>
@@ -40,11 +41,31 @@
                 matInput
                 placeholder="Nazwa użytkownika"
                 formControlName="login"
+                ngModel pattern=" *[a-zA-Z0-9]*.{8,}"
               />
               <mat-error
-                *ngIf="registerForm.controls['login'].hasError('required')"
+                *ngIf="registerForm.controls['login'].hasError('pattern')"
               >
-                nazwa użytkownika jest <strong>wymagana</strong>
+                Nazwa użytkownika jest <strong>wymagana</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                placeholder="Email"
+                type="email"
+                formControlName="email"
+                ngModel pattern ="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+              />
+              <mat-error
+                *ngIf="registerForm.controls['email'].hasError('pattern')"
+              >
+                Email jest <strong>wymagany</strong>
               </mat-error>
             </mat-form-field>
           </div>
@@ -58,9 +79,11 @@
                 placeholder="Hasło"
                 type="password"
                 formControlName="password"
+                ngModel pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  
               />
+               <!-- duza litera, cyfra, minimum 8  -->
               <mat-error
-                *ngIf="registerForm.controls['password'].hasError('required')"
+                *ngIf="registerForm.controls['password'].hasError('pattern')"
               >
                 Hasło jest <strong>wymagane</strong>
               </mat-error>
@@ -71,11 +94,14 @@
         <div class="row">
           <div class="col">
             <mat-form-field class="full-width">
-              <input matInput placeholder="PESEL" formControlName="PESEL" />
+              <input matInput placeholder="PESEL"
+               formControlName="PESEL"
+               ngModel pattern="[0-9].{11}" 
+                />
               <mat-error
-                *ngIf="registerForm.controls['PESEL'].hasError('required')"
+                *ngIf="registerForm.controls['PESEL'].hasError('pattern')"
               >
-                PESEL jest <strong>wymagane</strong>
+                PESEL jest <strong>wymagany</strong>
               </mat-error>
             </mat-form-field>
           </div>
@@ -85,7 +111,7 @@
           <div>
             <button
               mat-button
-              class="register-button"
+              class="log-in-button"
               (click)="openLoginForm()"
             >
               ZALOGUJ SIĘ
