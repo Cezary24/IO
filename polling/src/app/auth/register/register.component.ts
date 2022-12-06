@@ -11,11 +11,12 @@ import { AuthorizeService } from '../AuthorizeService.service';
 })
 export class RegisterComponent implements OnInit {
   registerForm = this._formBuilder.group({
-    name: [null, Validators.required],
+    name: ["",Validators.required],
     surname: [null, Validators.required],
     login: [null, Validators.required],
     password: [null, Validators.required],
-    PESEL: [null, Validators.required],
+    email: [null,Validators.required],
+    PESEL: [null, Validators.required]
   });
 
   constructor(

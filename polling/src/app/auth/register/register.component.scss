@@ -1,13 +1,17 @@
+
+
 .full-width {
     width: 25vw;
+    margin-bottom: 10px;
 }
 
 .register-card {
-    background-color: #D0D6B3;
+    background-color: white;
     width: 40vw;
-    height: 24vw;
+    height: auto;
     min-width: 120px;
-    margin: 20px auto;
+    margin: 70px auto;
+    box-shadow: 7px 7px 7px 7px rgb(211, 234, 243);
 }
 
 .row {
@@ -30,6 +34,7 @@
     align-content: stretch;
     gap: 1vw;
     justify-content: center;
+    margin-top: 20px;
 }
 
 button {
@@ -43,11 +48,16 @@ h1.title {
 }
 
 .register-button {
-    background-color: #AAAE7F;
     font-size: large;
     width: 200px;
-    height: 50px;;
+    outline: 2px solid #d4ade2;
+    outline-offset: -2px;
+}
 
+.log-in-button {
+    background-color: #d4ade2;
+    font-size: large;
+    width: 200px;
 }
 
 .mat-raised-button {
@@ -58,7 +68,7 @@ h1.title {
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 800px;
+    height: auto;
 }
 
 // media query

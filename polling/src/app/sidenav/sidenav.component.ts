@@ -1,25 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthorizeService } from '../auth/AuthorizeService.service';
+import { SideMenuServiceService } from '../side-menu-service.service';
+
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
 })
-export class SidenavComponent implements OnInit {
+export class SidenavComponent {
+
+  @ViewChild('sideNav') public sideNav! : any;
+
   constructor(
-    private readonly _authService: AuthorizeService,
-    private readonly _router: Router
-  ) {}
-
-  ngOnInit() {}
-
-  onLogoutToggle(): void {
-    this._authService.logOut();
+    private readonly _router: Router,
+    private sideMenuService: SideMenuServiceService
+  ) {
+      this.sideMenuService.sideMenuShowedStatus$.subscribe(value => this.handleSideManu(value));
   }
 
-  isLogged() {
-    return this._authService.isLogged();
+  handleSideManu(state: boolean): void {
+    state 
+    ? this.sideNav.open() 
+    : this.sideNav.close();
   }
 }
