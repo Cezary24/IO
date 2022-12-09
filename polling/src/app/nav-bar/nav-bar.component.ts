@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthorizeService } from '../auth/AuthorizeService.service';
-import { SideMenuServiceService } from '../side-menu-service.service';
+import { SideNavService } from '../side-nav.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -13,7 +13,7 @@ export class NavBarComponent {
   constructor(
     private readonly _authService: AuthorizeService,
     private readonly _router: Router,
-    private readonly _sideMenuService: SideMenuServiceService
+    private readonly _sideNavService: SideNavService
   ) {}
 
   onLogoutToggle(): void {
@@ -25,6 +25,6 @@ export class NavBarComponent {
   }
 
   showSideMenu() {
-  this._sideMenuService.showSideMenu();
+  this._sideNavService.showSideMenu();
   }
 }
