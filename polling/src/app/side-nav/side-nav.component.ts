@@ -1,12 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { SideMenuServiceService } from '../side-menu-service.service';
+import { SideNavService } from '../side-nav.service';
 
 
 @Component({
-  selector: 'app-sidenav',
-  templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.scss'],
+  selector: 'app-side-nav',
+  templateUrl: './side-nav.component.html',
+  styleUrls: ['./side-nav.component.scss'],
 })
 export class SidenavComponent {
 
@@ -14,9 +14,10 @@ export class SidenavComponent {
 
   constructor(
     private readonly _router: Router,
-    private sideMenuService: SideMenuServiceService
+    private sideNavSerivice: SideNavService
   ) {
-      this.sideMenuService.sideMenuShowedStatus$.subscribe(value => this.handleSideManu(value));
+      this.sideNavSerivice.sideMenuShowedStatus$.subscribe(value => this.handleSideManu(value));
+      
   }
 
   handleSideManu(state: boolean): void {

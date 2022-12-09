@@ -1,5 +1,5 @@
 <mat-sidenav-container>
-  <mat-sidenav opened mode="side" #sideNav>
+  <mat-sidenav  mode="side" #sideNav>
 
     <div class="side-nav-items-container">
       <div class="side-menu">
@@ -17,12 +17,14 @@
         <mat-icon mat-button>create</mat-icon>
       </button>
      
+
       <button class="side-button" routerLink="/poll-history">
-        <span class="text">Przejrzyj wypełnione</span>
+        <span class="text">Przejrzyj ankiety</span>
         <mat-icon mat-button>pageview</mat-icon>
       </button>
     </div>
 
   </mat-sidenav>
-  <mat-sidenav-content> <router-outlet></router-outlet></mat-sidenav-content>
+  <mat-sidenav-content>  <ng-content></ng-content> </mat-sidenav-content>
+ 
 </mat-sidenav-container>
