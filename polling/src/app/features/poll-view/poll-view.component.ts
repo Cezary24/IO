@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { AddQuestionComponent } from '../add-question/add-question.component';
+import { AddQuestionComponent } from '../../componenets/add-question/add-question.component';
 import { PollType } from '../../poll-type';
 
 @Component({

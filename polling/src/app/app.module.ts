@@ -5,9 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './features/auth/auth.module';
-import { CreatePollComponent } from './features/create-poll/create-poll.component';
-import { NotFoundPageComponent } from './features/not-found-page/not-found-page.component';
-import { NavBarComponent } from './features/nav-bar/nav-bar.component';
+import { NavBarComponent } from './componenets/nav-bar/nav-bar.component';
 import { SidenavModule } from './features/side-nav/side-nav.module';
 import { FormsModule } from '@angular/forms';
 import {MaterialDesignModule} from "./mat-design/material-design.module";
@@ -17,14 +15,16 @@ import {PollHistoryModule} from "./features/poll-history/poll-history.module";
 import {RouterModule} from "@angular/router";
 import {UserProfileModule} from "./features/user-profile/user-profile.module";
 import {PollViewModule} from "./features/poll-view/poll-view.module";
+import {CreatePollModule} from "./features/create-poll/create-poll-module";
+import {NotFoundPageModule} from "./features/not-found-page/not-found-page.module";
+import { DialogComponent } from './componenets/dialog/dialog.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreatePollComponent,
-    NotFoundPageComponent,
     NavBarComponent,
+    DialogComponent,
 
 
   ],
@@ -41,7 +41,9 @@ import {PollViewModule} from "./features/poll-view/poll-view.module";
       PollHistoryModule,
       RouterModule,
       UserProfileModule,
-      PollViewModule
+      PollViewModule,
+      CreatePollModule,
+      NotFoundPageModule,
     ],
   providers: [],
   bootstrap: [AppComponent],

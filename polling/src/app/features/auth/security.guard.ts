@@ -7,7 +7,7 @@ import {
   UrlTree,
 } from '@angular/router';
 
-import { AuthorizeService } from './AuthorizeService.service';
+import { AuthorizeService } from '../../services/AuthorizeService.service';
 
 @Injectable({
   providedIn: 'root',

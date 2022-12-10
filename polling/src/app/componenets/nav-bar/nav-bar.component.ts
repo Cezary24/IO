@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthorizeService } from '../auth/AuthorizeService.service';
-import { SideNavService } from '../../side-nav.service';
+import { AuthorizeService } from '../../services/AuthorizeService.service';
+import { SideNavService } from '../../services/side-nav.service';
 
 @Component({
   selector: 'app-nav-bar',

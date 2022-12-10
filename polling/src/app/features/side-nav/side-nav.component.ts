@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { SideNavService } from '../../side-nav.service';
+import { SideNavService } from '../../services/side-nav.service';
 
 
 @Component({
