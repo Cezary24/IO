@@ -1,17 +1,15 @@
-
-
 .full-width {
-    width: 25vw;
+    width: 40vw;
     margin-bottom: 10px;
 }
 
-.register-card {
-    background-color: white;
+.login-card {
+    background-color: #ffffff;
     width: 40vw;
     height: auto;
     min-width: 120px;
     margin: 70px auto;
-    box-shadow: 7px 7px 7px 7px rgb(211, 234, 243);
+    box-shadow: 7px 7px 7px 7px  rgb(211, 234, 243);
 }
 
 .row {
@@ -34,37 +32,38 @@
     align-content: stretch;
     gap: 1vw;
     justify-content: center;
-    margin-top: 20px;
 }
 
 button {
     font-size: 1.5vw;
-
 }
 
 h1.title {
     text-align: center;
-    font-size: 30px;
+    font-size:  30px;
 }
 
-.register-button {
+.log-button {
     font-size: large;
     width: 200px;
     outline: 2px solid #d4ade2;
     outline-offset: -2px;
-}
 
-.log-in-button {
+}
+.log-button:disabled {
+    background-color: white;
+}
+.register-button {
     background-color: #d4ade2;
     font-size: large;
     width: 200px;
+
+}
+.mat-raised-button{
+    margin: 0;
 }
 
-.mat-raised-button {
-    margin: none;
-}
-
-.register-form {
+.login-form{
     align-items: center;
     display: flex;
     justify-content: center;

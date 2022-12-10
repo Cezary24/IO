@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {  Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
@@ -37,8 +37,8 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     const result = this.loginAttempt();
-    if (result == false) {
       this.loginForm.controls['password'].reset();
+      if (!result) {
 
       this._matSnackBar.open(
         'Login lub hasło niepoprawne. Proszę spróbować jeszcze raz',
