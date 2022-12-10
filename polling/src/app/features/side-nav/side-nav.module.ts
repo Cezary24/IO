@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SideNavMaterialsModule } from './material';
 import { RouterModule } from '@angular/router';
 import { SidenavComponent } from './side-nav.component';
+import {MaterialDesignModule} from "../../mat-design/material-design.module";
 
 @NgModule({
-  imports: [CommonModule, SideNavMaterialsModule, RouterModule],
+  imports: [CommonModule,MaterialDesignModule, RouterModule],
   declarations: [SidenavComponent],
   exports: [SidenavComponent],
 })

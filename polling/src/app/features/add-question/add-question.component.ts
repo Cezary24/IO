@@ -1,6 +1,6 @@
 import {Component, Inject, ViewChild} from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { PollType } from '../poll-type';
+import { PollType } from '../../poll-type';
 import {SingleChoiceQuestionComponent} from "./single-choice-question/single-choice-question.component";
 import {AddQuestionDto} from "./add-question-dto";
 import {MultipleChoiceQuestionComponent} from "./multiple-choice-question/multiple-choice-question.component";

@@ -1,4 +1,4 @@
-import {PollType} from "../poll-type";
+import {PollType} from "../../poll-type";
 
 export interface AddQuestionDto {
   pollId: number;

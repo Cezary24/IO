@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PollType } from '../poll-type';
+import { PollType } from '../../poll-type';
 
 @Component({
-  selector: 'app-create-poll',
+  selector: 'app-create-poll-join',
   templateUrl: './create-poll.component.html',
   styleUrls: ['./create-poll.component.scss'],
 })

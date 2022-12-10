@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { SideNavService } from '../side-nav.service';
+import { SideNavService } from '../../side-nav.service';
 
 
 @Component({
@@ -17,12 +17,12 @@ export class SidenavComponent {
     private sideNavSerivice: SideNavService
   ) {
       this.sideNavSerivice.sideMenuShowedStatus$.subscribe(value => this.handleSideManu(value));
-      
+
   }
 
   handleSideManu(state: boolean): void {
-    state 
-    ? this.sideNav.open() 
+    state
+    ? this.sideNav.open()
     : this.sideNav.close();
   }
 }
